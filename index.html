@@ -53,6 +53,13 @@
             gap: 10px;
         }
 
+        .logo-img {
+            max-height: 50px;
+            width: auto;
+            border-radius: 6px;
+            object-fit: contain;
+        }
+
         .logo-text {
             font-family: 'Playfair Display', serif;
             font-size: 1.8rem;
@@ -409,13 +416,16 @@
 </head>
 <body>
 
-    <!-- Header -->
+    <!-- Header with Logo -->
     <header>
         <div class="logo-container">
-            <div>
-                <span class="logo-text">CAFE TALAB</span>
-                <span class="tagline-sub">Taste That Craves You</span>
-            </div>
+            <a href="index.html" style="text-decoration: none; display: flex; align-items: center; gap: 12px;">
+                <img src="Cafe Talab Logo.jpeg" alt="Cafe Talab Logo" class="logo-img">
+                <div>
+                    <span class="logo-text">CAFE TALAB</span>
+                    <span class="tagline-sub">Taste That Craves You</span>
+                </div>
+            </a>
         </div>
         <ul class="nav-links">
             <li><a href="#menu">Menu</a></li>
@@ -697,7 +707,7 @@
             </div>
         </div>
 
-        <!-- Non-Veg Burgers, Appetizers, Sandwiches, Momos -->
+        <!-- Non-Veg Burgers & Appetizers -->
         <div class="grid-3" style="margin-top: 25px;">
             <div>
                 <h3 style="margin-bottom: 10px;">🍗 Chicken Appetizers</h3>
@@ -713,96 +723,9 @@
                 <div class="menu-card" style="margin-bottom:10px;"><div class="item-info"><div class="item-name">Chicken Peri Peri Burger</div></div><div class="price-single">₹120</div></div>
                 <div class="menu-card" style="margin-bottom:10px;"><div class="item-info"><div class="item-name">Ch. Schezwan Burger</div></div><div class="price-single">₹120</div></div>
                 <div class="menu-card" style="margin-bottom:10px;"><div class="item-info"><div class="item-name">Chicken Tandoori Burger</div></div><div class="price-single">₹140</div></div>
-                <div class="menu-card" style="margin-bottom:10px;"><div class="item-info"><div class="item-name">Double Cheese Chicken</div></div><div class="price-single">₹150</div></div>
-                <div class="menu-card" style="margin-bottom:10px;"><div class="item-info"><div class="item-name">Crispy Chicken Burger</div></div><div class="price-single">₹170</div></div>
-                <div class="menu-card" style="margin-bottom:10px;"><div class="item-info"><div class="item-name">Mighty Ch. Burger</div></div><div class="price-single">₹250</div></div>
-            </div>
-
-            <div>
-                <h3 style="margin-bottom: 10px;">🥪 Chicken Sandwiches</h3>
-                <div class="menu-card" style="margin-bottom:10px;"><div class="item-info"><div class="item-name">Chicken Sandwich</div></div><div class="price-single">₹140</div></div>
-                <div class="menu-card" style="margin-bottom:10px;"><div class="item-info"><div class="item-name">Spicy Chicken Sandwich</div></div><div class="price-single">₹170</div></div>
-                <div class="menu-card" style="margin-bottom:10px;"><div class="item-info"><div class="item-name">Chicken Cheese Sandwich</div></div><div class="price-single">₹190</div></div>
-                <div class="menu-card" style="margin-bottom:10px;"><div class="item-info"><div class="item-name">Chicken Club Sandwich</div></div><div class="price-single">₹220</div></div>
-
-                <h3 style="margin: 20px 0 10px;">🥟 Chicken Momos (Fried 6 pcs)</h3>
-                <div class="menu-card" style="margin-bottom:10px;"><div class="item-info"><div class="item-name">Ch. Momos</div></div><div class="price-single">₹140</div></div>
-                <div class="menu-card" style="margin-bottom:10px;"><div class="item-info"><div class="item-name">Ch. Peri Peri Momos</div></div><div class="price-single">₹150</div></div>
-                <div class="menu-card" style="margin-bottom:10px;"><div class="item-info"><div class="item-name">Ch. Chatpata Momos</div></div><div class="price-single">₹160</div></div>
-            </div>
-        </div>
-
-        <!-- BEVERAGES & DESSERTS SECTION -->
-        <h2 class="cat-title" style="margin-top: 50px;">🥤 MOCKTAILS, SHAKES & DESSERTS</h2>
-
-        <div class="grid-3">
-            <div>
-                <h3 style="margin-bottom: 10px;">🍹 Mocktails</h3>
-                <div class="menu-card" style="margin-bottom:10px;"><div class="item-info"><div class="item-name">Strawberry Mocktail</div></div><div class="price-single">₹110</div></div>
-                <div class="menu-card" style="margin-bottom:10px;"><div class="item-info"><div class="item-name">Mint Mojito</div></div><div class="price-single">₹110</div></div>
-                <div class="menu-card" style="margin-bottom:10px;"><div class="item-info"><div class="item-name">Orange Mocktail</div></div><div class="price-single">₹120</div></div>
-                <div class="menu-card" style="margin-bottom:10px;"><div class="item-info"><div class="item-name">Blueberry Mocktail</div></div><div class="price-single">₹120</div></div>
-                <div class="menu-card" style="margin-bottom:10px;"><div class="item-info"><div class="item-name">Blue Lagoon</div></div><div class="price-single">₹120</div></div>
-                <div class="menu-card" style="margin-bottom:10px;"><div class="item-info"><div class="item-name">Peach Mocktail</div></div><div class="price-single">₹130</div></div>
-                <div class="menu-card" style="margin-bottom:10px;"><div class="item-info"><div class="item-name">Green Apple</div></div><div class="price-single">₹130</div></div>
-            </div>
-
-            <div>
-                <h3 style="margin-bottom: 10px;">🥤 Milkshakes</h3>
-                <div class="menu-card" style="margin-bottom:10px;"><div class="item-info"><div class="item-name">Cold Coffee</div></div><div class="price-single">₹100</div></div>
-                <div class="menu-card" style="margin-bottom:10px;"><div class="item-info"><div class="item-name">Chocolate Shake</div></div><div class="price-single">₹120</div></div>
-                <div class="menu-card" style="margin-bottom:10px;"><div class="item-info"><div class="item-name">Strawberry Shake</div></div><div class="price-single">₹130</div></div>
-                <div class="menu-card" style="margin-bottom:10px;"><div class="item-info"><div class="item-name">Blueberry Shake</div></div><div class="price-single">₹140</div></div>
-                <div class="menu-card" style="margin-bottom:10px;"><div class="item-info"><div class="item-name">Black Currant Shake</div></div><div class="price-single">₹150</div></div>
-            </div>
-
-            <div>
-                <h3 style="margin-bottom: 10px;">🧇 Waffle Sandwiches</h3>
-                <div class="menu-card" style="margin-bottom:10px;"><div class="item-info"><div class="item-name">Dark Chocolate Waffle</div></div><div class="price-single">₹140</div></div>
-                <div class="menu-card" style="margin-bottom:10px;"><div class="item-info"><div class="item-name">Naughty Nutella Waffle</div></div><div class="price-single">₹140</div></div>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- Info / Footer Section -->
-    <div class="info-section" id="contact">
-        <div class="info-grid">
-            <div class="info-box">
-                <h3>CAFE TALAB</h3>
-                <p>Your favourite spot for delicious pizzas, burgers, momos, shakes & more in Vasai!</p>
-                <p><strong>Owner:</strong> Umar Khan</p>
-                <div class="social-links">
-                    <a href="https://instagram.com/cafetalab" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="tel:9322653045"><i class="fas fa-phone"></i></a>
-                    <a href="https://wa.me/919322653045" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                </div>
-            </div>
-
-            <div class="info-box" id="about">
-                <h3>📍 Location & Delivery</h3>
-                <p><i class="fas fa-map-marker-alt" style="color:var(--primary);"></i> Near Sharda School, Navjeevan, Vasai (E)</p>
-                <p><i class="fas fa-truck" style="color:var(--accent-green);"></i> <strong>FREE DELIVERY</strong> on orders above ₹200</p>
-                <p><i class="fas fa-motorcycle"></i> Available on <strong>Zomato</strong> & <strong>Swiggy</strong></p>
-            </div>
-
-            <div class="info-box">
-                <h3>📞 Order Now</h3>
-                <p>Call or WhatsApp us directly for parcel orders:</p>
-                <p style="font-size: 1.3rem; font-weight:700; color:var(--primary);"><i class="fas fa-phone-alt"></i> 9322653045</p>
-                <a href="https://play.google.com/store" target="_blank" class="btn btn-primary" style="margin-top:10px;"><i class="fab fa-google-play"></i> Get Cafe App</a>
             </div>
         </div>
     </div>
-
-    <footer>
-        <p>&copy; 2026 Cafe Talab. All Rights Reserved.</p>
-    </footer>
-
-    <!-- Floating Order WhatsApp Button for Mobile -->
-    <a href="https://wa.me/919322653045?text=Hi%20Cafe%20Talab,%20I%20want%20to%20place%20an%20order" class="floating-order" target="_blank">
-        <i class="fab fa-whatsapp" style="font-size:1.3rem;"></i> Order on WhatsApp
-    </a>
 
 </body>
 </html>
