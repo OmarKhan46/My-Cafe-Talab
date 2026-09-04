@@ -82,18 +82,19 @@
         .size-price { font-weight: 700; color: var(--primary-dark); font-size: 0.9rem; display: block; margin-bottom: 4px; }
 
         .btn-add {
-            background: #fff;
-            border: 1.5px solid var(--primary);
-            color: var(--primary);
-            padding: 4px 12px;
+            background: var(--primary);
+            border: none;
+            color: #fff;
+            padding: 6px 14px;
             border-radius: 18px;
             font-size: 0.8rem;
             font-weight: 600;
             cursor: pointer;
             transition: 0.2s;
         }
-        .btn-add:hover { background: var(--primary); color: #fff; }
+        .btn-add:active { transform: scale(0.95); }
 
+        /* Floating Sticky Cart Bar */
         .cart-bar {
             position: fixed;
             bottom: 0;
@@ -101,7 +102,7 @@
             right: 0;
             background: #222;
             color: white;
-            padding: 14px 25px;
+            padding: 16px 25px;
             display: none;
             justify-content: space-between;
             align-items: center;
@@ -119,6 +120,7 @@
             cursor: pointer;
         }
 
+        /* Cart Drawer Modal */
         .cart-modal {
             position: fixed;
             inset: 0;
@@ -143,7 +145,7 @@
         .cart-items { flex: 1; margin: 20px 0; overflow-y: auto; }
         .cart-item-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; border-bottom: 1px dashed #eee; padding-bottom: 10px; }
         .qty-controls { display: flex; gap: 8px; align-items: center; }
-        .qty-btn { width: 26px; height: 26px; border: 1px solid #ccc; background: #eee; border-radius: 4px; cursor: pointer; }
+        .qty-btn { width: 28px; height: 28px; border: 1px solid #ccc; background: #eee; border-radius: 4px; cursor: pointer; font-size: 1rem; }
 
         .checkout-form input, .checkout-form textarea {
             width: 100%;
@@ -219,9 +221,9 @@
                     </div>
                 </div>
                 <div class="pizza-sizes">
-                    <div class="size-box"><span class="size-label">6"</span><span class="size-price">₹120</span><button class="btn-add" onclick="addToCart('Margherita (6&quot;)', 120)">+ Add</button></div>
-                    <div class="size-box"><span class="size-label">8"</span><span class="size-price">₹160</span><button class="btn-add" onclick="addToCart('Margherita (8&quot;)', 160)">+ Add</button></div>
-                    <div class="size-box"><span class="size-label">10"</span><span class="size-price">₹180</span><button class="btn-add" onclick="addToCart('Margherita (10&quot;)', 180)">+ Add</button></div>
+                    <div class="size-box"><span class="size-label">6 inch</span><span class="size-price">₹120</span><button class="btn-add" onclick="addToCart('Margherita 6 inch', 120)">+ Add</button></div>
+                    <div class="size-box"><span class="size-label">8 inch</span><span class="size-price">₹160</span><button class="btn-add" onclick="addToCart('Margherita 8 inch', 160)">+ Add</button></div>
+                    <div class="size-box"><span class="size-label">10 inch</span><span class="size-price">₹180</span><button class="btn-add" onclick="addToCart('Margherita 10 inch', 180)">+ Add</button></div>
                 </div>
             </div>
 
@@ -233,9 +235,9 @@
                     </div>
                 </div>
                 <div class="pizza-sizes">
-                    <div class="size-box"><span class="size-label">6"</span><span class="size-price">₹120</span><button class="btn-add" onclick="addToCart('Golden Corn (6&quot;)', 120)">+ Add</button></div>
-                    <div class="size-box"><span class="size-label">8"</span><span class="size-price">₹160</span><button class="btn-add" onclick="addToCart('Golden Corn (8&quot;)', 160)">+ Add</button></div>
-                    <div class="size-box"><span class="size-label">10"</span><span class="size-price">₹180</span><button class="btn-add" onclick="addToCart('Golden Corn (10&quot;)', 180)">+ Add</button></div>
+                    <div class="size-box"><span class="size-label">6 inch</span><span class="size-price">₹120</span><button class="btn-add" onclick="addToCart('Golden Corn 6 inch', 120)">+ Add</button></div>
+                    <div class="size-box"><span class="size-label">8 inch</span><span class="size-price">₹160</span><button class="btn-add" onclick="addToCart('Golden Corn 8 inch', 160)">+ Add</button></div>
+                    <div class="size-box"><span class="size-label">10 inch</span><span class="size-price">₹180</span><button class="btn-add" onclick="addToCart('Golden Corn 10 inch', 180)">+ Add</button></div>
                 </div>
             </div>
 
@@ -247,9 +249,9 @@
                     </div>
                 </div>
                 <div class="pizza-sizes">
-                    <div class="size-box"><span class="size-label">6"</span><span class="size-price">₹200</span><button class="btn-add" onclick="addToCart('BBQ Paneer (6&quot;)', 200)">+ Add</button></div>
-                    <div class="size-box"><span class="size-label">8"</span><span class="size-price">₹220</span><button class="btn-add" onclick="addToCart('BBQ Paneer (8&quot;)', 220)">+ Add</button></div>
-                    <div class="size-box"><span class="size-label">10"</span><span class="size-price">₹250</span><button class="btn-add" onclick="addToCart('BBQ Paneer (10&quot;)', 250)">+ Add</button></div>
+                    <div class="size-box"><span class="size-label">6 inch</span><span class="size-price">₹200</span><button class="btn-add" onclick="addToCart('BBQ Paneer 6 inch', 200)">+ Add</button></div>
+                    <div class="size-box"><span class="size-label">8 inch</span><span class="size-price">₹220</span><button class="btn-add" onclick="addToCart('BBQ Paneer 8 inch', 220)">+ Add</button></div>
+                    <div class="size-box"><span class="size-label">10 inch</span><span class="size-price">₹250</span><button class="btn-add" onclick="addToCart('BBQ Paneer 10 inch', 250)">+ Add</button></div>
                 </div>
             </div>
 
@@ -261,9 +263,9 @@
                     </div>
                 </div>
                 <div class="pizza-sizes">
-                    <div class="size-box"><span class="size-label">6"</span><span class="size-price">₹200</span><button class="btn-add" onclick="addToCart('Talab Special (6&quot;)', 200)">+ Add</button></div>
-                    <div class="size-box"><span class="size-label">8"</span><span class="size-price">₹220</span><button class="btn-add" onclick="addToCart('Talab Special (8&quot;)', 220)">+ Add</button></div>
-                    <div class="size-box"><span class="size-label">10"</span><span class="size-price">₹250</span><button class="btn-add" onclick="addToCart('Talab Special (10&quot;)', 250)">+ Add</button></div>
+                    <div class="size-box"><span class="size-label">6 inch</span><span class="size-price">₹200</span><button class="btn-add" onclick="addToCart('Talab Special 6 inch', 200)">+ Add</button></div>
+                    <div class="size-box"><span class="size-label">8 inch</span><span class="size-price">₹220</span><button class="btn-add" onclick="addToCart('Talab Special 8 inch', 220)">+ Add</button></div>
+                    <div class="size-box"><span class="size-label">10 inch</span><span class="size-price">₹250</span><button class="btn-add" onclick="addToCart('Talab Special 10 inch', 250)">+ Add</button></div>
                 </div>
             </div>
         </div>
@@ -311,6 +313,7 @@
         </section>
     </div>
 
+    <!-- Floating Sticky Cart Bar -->
     <div class="cart-bar" id="cartBar">
         <div>
             <span id="cartCount">0 items</span> | <strong id="cartTotal">₹0</strong>
@@ -318,6 +321,7 @@
         <button class="cart-bar-btn" onclick="openCart()"><i class="fas fa-shopping-bag"></i> View Cart</button>
     </div>
 
+    <!-- Slide-out Cart Drawer -->
     <div class="cart-modal" id="cartModal">
         <div class="cart-content">
             <div class="cart-header">
@@ -364,14 +368,16 @@
             if (existing) {
                 existing.qty += 1;
             } else {
-                cart.push({ name, price, qty: 1 });
+                cart.push({ name: name, price: Number(price), qty: 1 });
             }
             updateCartUI();
         }
 
         function changeQty(index, delta) {
             cart[index].qty += delta;
-            if (cart[index].qty <= 0) cart.splice(index, 1);
+            if (cart[index].qty <= 0) {
+                cart.splice(index, 1);
+            }
             updateCartUI();
         }
 
@@ -382,30 +388,98 @@
 
             if (totalQty > 0) {
                 cartBar.style.display = 'flex';
-                document.getElementById('cartCount').innerText = `${totalQty} items`;
-                document.getElementById('cartTotal').innerText = `₹${totalPrice}`;
+                document.getElementById('cartCount').innerText = totalQty + " items";
+                document.getElementById('cartTotal').innerText = "₹" + totalPrice;
             } else {
                 cartBar.style.display = 'none';
                 closeCart();
             }
 
             const container = document.getElementById('cartItemsContainer');
-            container.innerHTML = cart.length === 0 ? '<p style="text-align:center; color:#888;">Your cart is empty</p>' : '';
-            
-            cart.forEach((item, index) => {
-                container.innerHTML += `
-                    <div class="cart-item-row">
-                        <div>
-                            <div style="font-weight:600;">${item.name}</div>
-                            <div style="font-size:0.85rem; color:#888;">₹${item.price} each</div>
+            if (cart.length === 0) {
+                container.innerHTML = '<p style="text-align:center; color:#888; margin-top:20px;">Your cart is empty</p>';
+            } else {
+                let html = '';
+                cart.forEach((item, index) => {
+                    html += `
+                        <div class="cart-item-row">
+                            <div>
+                                <div style="font-weight:600;">${item.name}</div>
+                                <div style="font-size:0.85rem; color:#888;">₹${item.price} each</div>
+                            </div>
+                            <div class="qty-controls">
+                                <button class="qty-btn" onclick="changeQty(${index}, -1)">-</button>
+                                <span>${item.qty}</span>
+                                <button class="qty-btn" onclick="changeQty(${index}, 1)">+</button>
+                                <span style="margin-left:10px; font-weight:600;">₹${item.price * item.qty}</span>
+                            </div>
                         </div>
-                        <div class="qty-controls">
-                            <button class="qty-btn" onclick="changeQty(${index}, -1)">-</button>
-                            <span>${item.qty}</span>
-                            <button class="qty-btn" onclick="changeQty(${index}, 1)">+</button>
-                            <span style="margin-left:10px; font-weight:600;">₹${item.price * item.qty}</span>
-                        </div>
-                    </div>
-                `;
-            });
-            document.getElementById('modalTotal').innerText = `₹${to
+                    `;
+                });
+                container.innerHTML = html;
+            }
+            document.getElementById('modalTotal').innerText = "₹" + totalPrice;
+        }
+
+        function openCart() {
+            document.getElementById('cartModal').style.display = 'flex';
+        }
+
+        function closeCart() {
+            document.getElementById('cartModal').style.display = 'none';
+        }
+
+        async function initiatePhonePe() {
+            const name = document.getElementById('custName').value.trim();
+            const phone = document.getElementById('custPhone').value.trim();
+            const address = document.getElementById('custAddress').value.trim();
+            const statusMsg = document.getElementById('statusMsg');
+            const payBtn = document.getElementById('payBtn');
+
+            if (!name || phone.length < 10 || !address) {
+                statusMsg.innerText = "Please fill your Name, 10-digit Phone, and Address.";
+                return;
+            }
+
+            const totalAmount = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+            if (totalAmount < 1) {
+                statusMsg.innerText = "Please add items to cart.";
+                return;
+            }
+
+            payBtn.disabled = true;
+            payBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+            statusMsg.innerText = "";
+
+            try {
+                const response = await fetch(BACKEND_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        amount: totalAmount,
+                        customerName: name,
+                        customerPhone: phone,
+                        address: address,
+                        items: cart
+                    })
+                });
+
+                const result = await response.json();
+
+                if (response.ok && result.url) {
+                    window.location.href = result.url;
+                } else {
+                    const printMsg = typeof result.message === 'object' ? JSON.stringify(result.message) : (result.message || 'Payment initiation failed');
+                    statusMsg.innerText = printMsg;
+                    payBtn.disabled = false;
+                    payBtn.innerHTML = '<i class="fas fa-lock"></i> Pay via PhonePe';
+                }
+            } catch (err) {
+                statusMsg.innerText = "Connection error with payment server: " + err.message;
+                payBtn.disabled = false;
+                payBtn.innerHTML = '<i class="fas fa-lock"></i> Pay via PhonePe';
+            }
+        }
+    </script>
+</body>
+</html>
