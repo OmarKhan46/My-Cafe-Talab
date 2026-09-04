@@ -94,7 +94,6 @@
         }
         .btn-add:hover { background: var(--primary); color: #fff; }
 
-        /* Floating Cart Sticky Bar */
         .cart-bar {
             position: fixed;
             bottom: 0;
@@ -120,7 +119,6 @@
             cursor: pointer;
         }
 
-        /* Cart Drawer Modal */
         .cart-modal {
             position: fixed;
             inset: 0;
@@ -157,7 +155,7 @@
         }
 
         .btn-pay {
-            background: #5f259f; /* PhonePe Purple */
+            background: #5f259f;
             color: white;
             width: 100%;
             padding: 14px;
@@ -313,7 +311,6 @@
         </section>
     </div>
 
-    <!-- Floating Sticky Cart Button -->
     <div class="cart-bar" id="cartBar">
         <div>
             <span id="cartCount">0 items</span> | <strong id="cartTotal">₹0</strong>
@@ -321,7 +318,6 @@
         <button class="cart-bar-btn" onclick="openCart()"><i class="fas fa-shopping-bag"></i> View Cart</button>
     </div>
 
-    <!-- Slide-out Cart & Checkout Drawer -->
     <div class="cart-modal" id="cartModal">
         <div class="cart-content">
             <div class="cart-header">
@@ -346,7 +342,7 @@
                 <button class="btn-pay" id="payBtn" onclick="initiatePhonePe()">
                     <i class="fas fa-lock"></i> Pay via PhonePe
                 </button>
-                <div id="statusMsg" style="color: red; font-size: 0.85rem; text-align: center; margin-top: 10px;"></div>
+                <div id="statusMsg" style="color: red; font-size: 0.85rem; text-align: center; margin-top: 10px; word-break: break-all;"></div>
             </div>
         </div>
     </div>
@@ -412,62 +408,4 @@
                     </div>
                 `;
             });
-            document.getElementById('modalTotal').innerText = `₹${totalPrice}`;
-        }
-
-        function openCart() { document.getElementById('cartModal').style.display = 'flex'; }
-        function closeCart() { document.getElementById('cartModal').style.display = 'none'; }
-
-        async function initiatePhonePe() {
-            const name = document.getElementById('custName').value.trim();
-            const phone = document.getElementById('custPhone').value.trim();
-            const address = document.getElementById('custAddress').value.trim();
-            const statusMsg = document.getElementById('statusMsg');
-            const payBtn = document.getElementById('payBtn');
-
-            if (!name || phone.length < 10 || !address) {
-                statusMsg.innerText = "Please fill your Name, 10-digit Phone, and Address.";
-                return;
-            }
-
-            const totalAmount = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
-            if (totalAmount < 1) {
-                statusMsg.innerText = "Please add items to cart.";
-                return;
-            }
-
-            payBtn.disabled = true;
-            payBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
-            statusMsg.innerText = "";
-
-            try {
-                const response = await fetch(BACKEND_URL, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        amount: totalAmount,
-                        customerName: name,
-                        customerPhone: phone,
-                        address: address,
-                        items: cart
-                    })
-                });
-
-                const result = await response.json();
-
-                if (response.ok && result.url) {
-                    window.location.href = result.url; // Redirect to PhonePe PG Gateway
-                } else {
-                    statusMsg.innerText = result.message || "Failed to launch payment. Please check credentials.";
-                    payBtn.disabled = false;
-                    payBtn.innerHTML = '<i class="fas fa-lock"></i> Pay via PhonePe';
-                }
-            } catch (err) {
-                statusMsg.innerText = "Connection error with payment server.";
-                payBtn.disabled = false;
-                payBtn.innerHTML = '<i class="fas fa-lock"></i> Pay via PhonePe';
-            }
-        }
-    </script>
-</body>
-</html>
+            document.getElementById('modalTotal').innerText = `₹${to
