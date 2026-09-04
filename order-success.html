@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Status | Cafe Talab</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Poppins', sans-serif; background: #faf8f5; text-align: center; padding: 50px 20px; }
+        .card { background: white; max-width: 480px; margin: auto; padding: 40px 25px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        .icon-success { font-size: 3.5rem; color: #2a9d8f; margin-bottom: 15px; }
+        h2 { color: #222; margin-bottom: 10px; }
+        p { color: #666; font-size: 0.95rem; margin-bottom: 20px; }
+        .tx-box { background: #f4f4f4; padding: 10px; border-radius: 8px; font-family: monospace; font-size: 0.9rem; margin-bottom: 25px; word-break: break-all; }
+        .btn { display: inline-block; background: #ff8c00; color: white; padding: 12px 25px; border-radius: 25px; text-decoration: none; font-weight: 600; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <i class="fas fa-check-circle icon-success"></i>
+        <h2>Payment Processed!</h2>
+        <p>Your order request has been received by Cafe Talab. We will prepare your fresh meal shortly.</p>
+        <div class="tx-box" id="txId">Order Reference: Loading...</div>
+        <a href="index.html" class="btn">Back to Menu</a>
+    </div>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const tx = params.get('txId') || 'CT_' + Date.now();
+        document.getElementById('txId').innerText = 'Order Reference: ' + tx;
+    </script>
+</body>
+</html>
